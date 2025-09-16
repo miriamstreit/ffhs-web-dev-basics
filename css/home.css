@@ -1,0 +1,122 @@
+#frontpage::before {
+    content: "";
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height: 200vh;
+    display: block;
+    margin: -50px -8px 0 -8px;
+    background: url("../img/pizza1.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    filter: blur(4px);
+
+}
+
+.startpage-title {
+    font-family: 'Roboto Slab Regular', serif;
+    font-size: 144px;
+    text-transform: uppercase;
+    word-wrap: break-word;
+    color: white;
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 1px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin: 10px 0 30px 20px;
+}
+
+.startpage-nav-container {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-areas: "pizza salad drinks";
+    background: rgba(202, 154, 124, 0.85);
+    padding: 25px 10px;
+}
+
+.startpage-nav-link {
+    width: 100%;
+    text-decoration: none;
+    position: relative;
+    text-align: center;
+}
+
+.startpage-nav-link:hover {
+    -webkit-filter: brightness(70%);
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+.startpage-nav-image {
+    object-fit: cover;
+    width: 100%;
+    max-height: 100%;
+}
+
+.startpage-nav-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    font-family: 'Roboto Slab Regular', serif;
+    font-size: 100px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 1px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+@media screen and (max-width: 1500px) {
+    .startpage-nav-text {
+        font-size: 80px;
+    }
+
+    .startpage-title {
+        font-size: 120px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .startpage-nav-text {
+        font-size: 60px;
+    }
+
+    .startpage-title {
+        font-size: 100px;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .startpage-nav-container {
+        grid-template-columns: none;
+        grid-template-areas: "pizza"
+        "salad"
+        "drinks";
+        grid-template-rows: repeat(3, minmax(0, 1fr));
+    }
+
+    .startpage-title {
+        font-size: 60px;
+        margin-left: 10px;
+    }
+}
+
+#pizzalink {
+    grid-area: pizza;
+}
+
+#saladlink {
+    grid-area: salad;
+}
+
+#drinkslink {
+    grid-area: drinks;
+}

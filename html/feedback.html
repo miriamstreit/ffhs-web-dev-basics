@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tony's Pizza Factory</title>
+    <link href="../img/favicon.ico" rel="icon" type="image/x-icon"/>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/feedback.css">
+    <link rel="stylesheet" href="../css/nav.css">
+    <script src="../js/dimple.v2.3.0.min.js"></script>
+    <script src="../js/d3.v4.3.0.min.js"></script>
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="logo">Tony's <span>Pizza Factory</span></a>
+        <button id="mobileNavBarButton" class="mobile-nav-bar-button"><img src="../img/HamburgerMenu1.png" class="nav-hamburger-icon" alt="hamburger menu button icon"></button>
+        <nav class="nav-bar">
+            <a href="pizza.html" class="nav-item">Pizza</a>
+            <a href="salad.html" class="nav-item">Salad</a>
+            <a href="drinks.html" class="nav-item">Soft drinks</a>
+            <a href="feedback.html" class="nav-item"><img src="../img/feedback.png" alt="feedback icon" class="nav-icon"></a>
+            <a href="cart.html" class="nav-item"><img src="../img/cart.png" alt="cart icon" class="nav-icon"></a>
+        </nav>
+        <div id="mobile-navigation" class="mobile-navigation">
+            <a href="pizza.html" class="mobile-nav-item">Pizza</a>
+            <a href="salad.html" class="mobile-nav-item">Salad</a>
+            <a href="drinks.html" class="mobile-nav-item">Soft drinks</a>
+            <a href="feedback.html" class="mobile-nav-item"><img src="../img/feedback.png" alt="feedback icon" class="nav-icon"></a>
+            <a href="cart.html" class="mobile-nav-item"><img src="../img/cart.png" alt="cart icon" class="nav-icon"></a>
+        </div>
+    </header>
+    <section class="section-normal section-feedback">
+        <h1 class="page-title" id="page-title">Tell us what you think</h1>
+        <form class="feedback-form" id="feedback-form" name="feedback_form">
+            <div class="feedback-question radio-question">
+                <label class="input-label">How do you like our pizza?</label>
+                <div class="input-options">
+                    <label class="radio-label">
+                        <input class="feedback-radio" type="radio" name="pizzaFeedback" value="awesome" onchange="validateForm()">
+                        Awesome
+                    </label>
+                    <label class="radio-label">
+                        <input class="feedback-radio" type="radio" name="pizzaFeedback" value="good" onchange="validateForm()">
+                        Good
+                    </label>
+                    <label class="radio-label">
+                        <input class="feedback-radio" type="radio" name="pizzaFeedback" value="okay" onchange="validateForm()">
+                        Okay
+                    </label>
+                    <label class="radio-label">
+                        <input class="feedback-radio" type="radio" name="pizzaFeedback" value="poor" onchange="validateForm()">
+                        Poor
+                    </label>
+                </div>
+                <label id="pizza-feedback-error" class="error-message"></label>
+            </div>
+
+                <div class="feedback-question radio-question">
+                    <label class="input-label">What do you think about our prices?</label>
+                    <div class="input-options">
+                        <label class="radio-label">
+                            <input class="feedback-radio" type="radio" name="priceFeedback" value="fair" onchange="validateForm()">
+                            Fair
+                        </label>
+                        <label class="radio-label">
+                            <input class="feedback-radio" type="radio" name="priceFeedback" value="okay" onchange="validateForm()">
+                            Okay
+                        </label>
+                        <label class="radio-label">
+                            <input class="feedback-radio" type="radio" name="priceFeedback" value="expensive" onchange="validateForm()">
+                            Expensive
+                        </label>
+                    </div>
+                    <label id="price-feedback-error" class="error-message"></label>
+                </div>
+
+                <div class="feedback-question text-question">
+                    <label class="input-label" for="name">Your name:</label>
+                    <input class="feedback-input" id="name" type="text" required pattern="^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+$" minlength="2" onchange="validateForm()">
+                    <label id="name-error" class="error-message"></label>
+                </div>
+
+                <div class="feedback-question text-question">
+                    <label class="input-label" for="email">Your e-mail address:</label>
+                    <input class="feedback-input" id="email" type="email" required onchange="validateForm()">
+                    <label id="email-error" class="error-message"></label>
+                </div>
+
+                <div class="feedback-question textarea-question">
+                    <label class="input-label" for="improvements">What can we do better?</label>
+                    <textarea class="feedback-textarea" id="improvements" rows="5" minlength="50" onchange="validateForm()"></textarea>
+                    <label id="improvements-error" class="error-message"></label>
+                </div>
+
+                <div>
+                    <input id="feedback-button" class="button" type="submit" value="Let the boss know" disabled onclick="submitFeedback()">
+                </div>
+            <label id="general-error" class="error-message"></label>
+        </form>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="opening-times-container">
+                <p>Hours:</p>
+                <p>Mon-Thu: 11:00 - 23:00</p>
+                <p>Fri-Sat: 11:00 - 24:00</p>
+                <p>Sunday closed</p>
+            </div>
+            <div class="testimonials-container">
+                <blockquote>"The Pizzeria is one place I have been wanting to visit for a long time. The reason being their
+                    Rustica pizza which absolutely blew me away" - Jimmy
+                </blockquote>
+            </div>
+            <div class="address-container">
+                <p>Address:</p>
+                <p>Tony's Pizza Factory</p>
+                <p>2122 N Clark St</p>
+                <p>Chicago, IL 60614, USA</p>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/toggleMobileNav.js"></script>
+    <script src="../js/formCheck.js"></script>
+    <script src="../js/dimple.v2.3.0.min.js"></script>
+    <script src="../js/d3.v4.3.0.min.js"></script>
+</body>
+</html>

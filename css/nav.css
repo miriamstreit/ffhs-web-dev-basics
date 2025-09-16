@@ -1,0 +1,167 @@
+.logo {
+    margin-left: 20px;
+    font-size: 80px;
+    text-decoration: none;
+    color: black;
+    -webkit-text-stroke-color: white;
+    -webkit-text-stroke-width: 1px;
+    text-transform: uppercase;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.header, .footer {
+    width: 100%;
+    background-color: #BC412B;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    z-index: 100;
+}
+
+.mobile-nav-bar-button {
+    display: none;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    height: 128px;
+    justify-content: space-between;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    height: 208px;
+    padding: 0;
+    justify-content: center;
+}
+
+/* footer-content is required because footer should be whole page width and it's content only 80% */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}
+
+.nav-bar {
+    background-color: #DC602E;
+    height: 128px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-item {
+    font-size: 36px;
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 10px 10px;
+}
+
+.nav-icon {
+    width: 50px;
+    height: 50px;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.nav-hamburger-icon {
+    width: 75px;
+    height: 75px;
+}
+
+.mobile-navigation {
+    display: none;
+    background-color: #DC602E;
+    z-index: 100;
+    position: absolute;
+    top: 100px;
+    width: 100%;
+    left: 0;
+    margin: 0;
+}
+
+.mobile-nav-item {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 36px;
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.testimonials-container {
+    width: 400px;
+    display: flex;
+    align-items: center;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    font-size: 14px;
+}
+
+.address-container, .opening-times-container {
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    font-size: 24px;
+}
+
+.address-container p, .opening-times-container p {
+    margin: 0;
+}
+
+@media screen and (max-width: 1620px) {
+    .logo span {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .nav-bar {
+        display: none;
+    }
+
+    .header {
+        height: 100px;
+    }
+
+    .mobile-nav-bar-button {
+        display: block;
+        margin: 0;
+        height: 100px;
+        width: 100px;
+        background-color: #DC602E;
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
+
+    .logo {
+        font-size: 60px;
+    }
+
+    .footer {
+        height: 350px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .testimonials-container {
+        display: none;
+    }
+
+    .address-container {
+        margin-top: 40px;
+    }
+
+    .address-container, .opening-times-container {
+        text-align: center;
+    }
+}

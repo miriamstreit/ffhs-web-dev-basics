@@ -1,0 +1,12 @@
+stages:
+  - test
+
+include:
+  - template: Code-Quality.gitlab-ci.yml
+
+code-quality-check-job:
+  stage: test
+  script:
+    - echo "Running code quality test..."
+  artifacts:
+    paths: [gl-code-quality-report.json]

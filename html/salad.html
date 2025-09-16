@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tony's Pizza Factory</title>
+    <link href="../img/favicon.ico" rel="icon" type="image/x-icon"/>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/nav.css">
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="logo">Tony's <span>Pizza Factory</span></a>
+        <button id="mobileNavBarButton" class="mobile-nav-bar-button"><img src="../img/HamburgerMenu1.png" class="nav-hamburger-icon" alt="hamburger menu button icon"></button>
+        <nav class="nav-bar">
+            <a href="pizza.html" class="nav-item">Pizza</a>
+            <a href="salad.html" class="nav-item">Salad</a>
+            <a href="drinks.html" class="nav-item">Soft drinks</a>
+            <a href="feedback.html" class="nav-item"><img src="../img/feedback.png" alt="feedback icon" class="nav-icon"></a>
+            <a href="cart.html" class="nav-item"><img src="../img/cart.png" alt="cart icon" class="nav-icon"></a>
+        </nav>
+        <div id="mobile-navigation" class="mobile-navigation">
+            <a href="pizza.html" class="mobile-nav-item">Pizza</a>
+            <a href="salad.html" class="mobile-nav-item">Salad</a>
+            <a href="drinks.html" class="mobile-nav-item">Soft drinks</a>
+            <a href="feedback.html" class="mobile-nav-item"><img src="../img/feedback.png" alt="feedback icon" class="nav-icon"></a>
+            <a href="cart.html" class="mobile-nav-item"><img src="../img/cart.png" alt="cart icon" class="nav-icon"></a>
+        </div>
+    </header>
+
+    <section class="section-normal">
+        <h1 class="page-title" id="page-title">Salad</h1>
+        <div class="menu-container" id="menu-container">
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="opening-times-container">
+                <p>Hours:</p>
+                <p>Mon-Thu: 11:00 - 23:00</p>
+                <p>Fri-Sat: 11:00 - 24:00</p>
+                <p>Sunday closed</p>
+            </div>
+            <div class="testimonials-container">
+                <blockquote>"The Pizzeria is one place I have been wanting to visit for a long time. The reason being their
+                    Rustica pizza which absolutely blew me away" - Jimmy
+                </blockquote>
+            </div>
+            <div class="address-container">
+                <p>Address:</p>
+                <p>Tony's Pizza Factory</p>
+                <p>2122 N Clark St</p>
+                <p>Chicago, IL 60614, USA</p>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/toggleMobileNav.js"></script>
+    <script src="../js/ContentLoader.js"></script>
+    <script>
+        init("salads");
+    </script>
+</body>
+</html>

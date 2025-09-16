@@ -1,0 +1,251 @@
+@font-face {
+    font-family: "Roboto Slab Regular";
+    src: url(./font/RobotoSlab-Regular.ttf);
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    font-family: "Roboto Slab Regular", sans-serif;
+    margin: 0 0 0 0;
+    background-color: #F5F3EB;
+    position: relative;
+    min-height: 100%;
+}
+
+.section-normal {
+    margin: 0 auto 0;
+    padding-top: 150px;
+    padding-bottom: 250px;
+}
+
+.section-start {
+
+}
+
+.section-feedback {
+    padding-bottom: 50px;
+}
+
+.section-charts {
+    padding-bottom: 300px;
+}
+
+.section-cart {
+    padding-bottom: 330px;
+}
+
+.page-title {
+    font-family: 'Roboto Slab Regular', serif;
+    font-size: 80px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 1.5px;
+    margin-top: 0;
+    margin-left: 50px;
+    margin-bottom: 0;
+}
+
+.menu-container {
+    display: grid;
+    padding: 20px 50px 0;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.menu-item {
+    border: 1px solid black;
+}
+
+.product-image {
+    width: 100%;
+    padding: 0;
+    height: 213.5px;
+    object-fit: cover;
+}
+
+.details-container {
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.menu-details-selection-order {
+    display: grid;
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+    grid-template-areas:
+    "description description description description description description button button"
+    "select select select select select select button button"
+    "label label label input input input button button";
+    margin-top: -4px;
+    background-color: white;
+}
+
+.menu-item-description {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    grid-area: description;
+}
+
+.amount-label {
+    grid-area: label;
+    text-transform: uppercase;
+    font-size: 18px;
+    margin: 9px;
+    line-height: 24px;
+}
+
+.amount-input {
+    grid-area: input;
+    border: none;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    font-family: "Roboto Slab Regular", sans-serif;
+    font-size: 24px;
+    text-align: justify;
+    padding: 0 0 0 35%;
+}
+.amount-input::-webkit-outer-spin-button,
+.amount-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    width: 2em;
+    background-image: url(../img/input-number-arrow.png);
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: center;
+    border-left: 1px solid black;
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+.amount-input::-webkit-inner-spin-button:hover,
+.amount-input::-webkit-inner-spin-button:active{
+    opacity: .8;
+}
+
+.menu-title-and-price {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-item-title {
+    overflow-wrap: break-word;
+    /*text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;*/
+    font-size: 18px;
+    text-transform: uppercase;
+    line-height: 24px;
+    margin: 9px 9px 3px 9px;
+    height: 48px;
+}
+
+.menu-item-contents {
+    overflow-wrap: break-word;
+    font-size: 12px;
+    line-height: 16px;
+    margin: 3px 9px 9px 9px;
+    text-transform: uppercase;
+    height: 48px;
+}
+
+.menu-item-addtocart {
+    grid-area: button;
+    cursor: pointer;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-item-price {
+    font-size: 18px;
+    line-height: 24px;
+    margin: 9px;
+}
+
+.select-container {
+    grid-area: select;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    height: 34px;
+}
+
+.select, .select:focus, .select:active {
+    font-size: 18px;
+    line-height: 24px;
+    width: 100%;
+    height: 100%;
+    padding: 0 0 0 9px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url(../img/select-arrow.png);
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position-x: 100%;
+    border: none;
+    font-family: "Roboto Slab Regular", sans-serif;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.cart-button-image {
+    height: 52px;
+    width: auto;
+    margin: 0 auto;
+}
+
+.button {
+    float: right;
+    font-family: "Roboto Slab Regular", sans-serif;
+    text-transform: uppercase;
+    font-size: 18px;
+    background-color: #05A8AA;
+    border: 4px solid black;
+    padding: 10px 30px;
+    cursor: pointer;
+    margin: 20px;
+}
+
+.button:hover {
+    background-color: #048e90;
+}
+
+.button:active {
+    background-color: #036769;
+    cursor: initial;
+}
+
+@media screen and (max-width: 1080px) {
+    .section-normal {
+        padding-bottom: 400px;
+    }
+
+    .section-start {
+        padding-bottom: 400px;
+    }
+
+    .section-feedback {
+        /* for some reason this pixel is needed, otherwise the footer breaks */
+        padding-bottom: 1px;
+    }
+
+    .section-charts {
+        padding-bottom: 450px;
+    }
+
+    .section-cart {
+        padding-bottom: 460px;
+    }
+}
